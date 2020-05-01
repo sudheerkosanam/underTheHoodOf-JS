@@ -68,5 +68,25 @@ Call Stack Visualization
 
 ![cq37yxj9m3t6v59bysvi](https://user-images.githubusercontent.com/32735357/80788493-ed486c80-8ba6-11ea-82f1-236a5343a287.gif)
 
+When the V8 engine encounters an error, it prints a stack trace. A stack trace is basically the state of the Call Stack.
+
+Let's take another example that blows up the Call Stack 💥.
+
+We can do this by using a recursive function.
+
+function recursion() {
+  recursion();
+}
+
+console.log(recursion());
+
+
+Call Stack Visualization
+![etevycrnjmom6vw6inwb](https://user-images.githubusercontent.com/32735357/80791781-57b1da80-8bb0-11ea-83da-cf829f963515.gif)
+
+A recursive function calls itself again and again. At some point in time, the number of function calls exceeds the actual size of the stack, and the browser detects this to take action by throwing an error.
+
+I hope now you have a fair understanding of how JavaScript engine works under the hood.
+
 
 
